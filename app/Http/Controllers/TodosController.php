@@ -66,7 +66,7 @@ class TodosController extends Controller
         //save
         $todo->save();
         // return view('todos.index')->with('todo', $todo);
-        return redirect('/todo')->with('success', 'Todo created');
+        return redirect('/')->with('success', 'Todo created');
     }
 
 
@@ -129,7 +129,7 @@ class TodosController extends Controller
         //save
         $todo->save();
         // return view('todos.index')->with('todo', $todo);
-        return redirect('/todos')->with('success', 'Todo Updated');
+        return redirect('/')->with('success', 'Todo Updated');
     }
 
     /**
@@ -142,7 +142,7 @@ class TodosController extends Controller
     {
         $todo = Todo::find($id);
         $todo->delete();
-        return 'success';
-        // return redirect('/todos')->with('success', 'Todo Deleted');
+        // return 'success';
+        return redirect('/')->with('delete', 'Todo Deleted');
     }
 }

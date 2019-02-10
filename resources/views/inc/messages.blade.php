@@ -13,4 +13,11 @@
 
 </div>
 
+@endif @if(session('delete'))
+
+<div class="alert alert-danger" id="delete-alert">
+    <button type="button" class="close" data-dismiss="alert">x</button> {{session('delete')}}
+
+</div>
+
 @endif

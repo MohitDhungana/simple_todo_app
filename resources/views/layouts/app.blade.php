@@ -21,6 +21,8 @@
     @yield('footer')
     <p id='footer' class='text-center'>Copyright &copy; 2019 TODO list</p>
 
+
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

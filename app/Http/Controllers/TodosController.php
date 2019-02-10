@@ -21,6 +21,11 @@ class TodosController extends Controller
         return view('todos.index')->with('todos', $todos);
     }
 
+
+
+
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -30,6 +35,14 @@ class TodosController extends Controller
     {
         return view('todos.create');
     }
+
+
+
+
+
+
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -53,8 +66,17 @@ class TodosController extends Controller
         //save
         $todo->save();
         // return view('todos.index')->with('todo', $todo);
-        return redirect('/todos')->with('success', 'Todo created');
+        return redirect('/todo')->with('success', 'Todo created');
     }
+
+
+
+
+
+
+
+
+
 
     /**
      * Display the specified resource.
@@ -69,6 +91,10 @@ class TodosController extends Controller
         // return route('todo.show', $id)->with('todo', $todo);
     }
 
+
+
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -80,6 +106,10 @@ class TodosController extends Controller
         $todo = Todo::find($id);
         return view('todos.edit')->with('todo', $todo);
     }
+
+
+
+
 
     /**
      * Update the specified resource in storage.
